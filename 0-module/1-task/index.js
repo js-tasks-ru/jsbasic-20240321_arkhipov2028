@@ -1,7 +1,4 @@
-let a = prompt("Введите a");
-let b = prompt("Введите b");
 function sum(a,b) {
   let result = +a + +b;
-  alert(result);
+  return(result);
 }
-sum(a,b);
