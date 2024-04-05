@@ -1,24 +1,13 @@
-/**
- * Эту функцию трогать не нужно
- */
-function print(text) {
-  console.log(text);
-}
-
-/**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- */
 function isValid(name) {
-  // ваш код...
-}
-
-function sayHello() {
-  let userName = prompt('Введите ваше имя');
-
-  if (isValid(userName)) {
-    print(`Welcome back, ${userName}!`);
+  if (name==undefined) {
+    return(false);
   } else {
-    print('Некорректное имя');
+    let n = name.length;
+    let space = " ";
+    if (n<4 || n==0 || name.includes(space, 0)) {
+      return(false);
+    } else {
+      return(true);
+    }
   }
 }
