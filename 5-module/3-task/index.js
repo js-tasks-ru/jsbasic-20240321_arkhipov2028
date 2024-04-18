@@ -7,12 +7,12 @@ function initCarousel() {
   ArrowLeft.style.display = 'none';
   ArrowLeft.addEventListener ('click', () => {
     position--;
-    elem.style.transform += 'translateX('+ ElementSize +'px)';
+    elem.style.transform = `translateX(${-position * ElementSize}px)`;
     ArrowHide(position);
   });
   ArrowRight.addEventListener('click', () => {
     position++;
-    elem.style.transform += 'translateX(-'+ ElementSize +'px)'; 
+    elem.style.transform = `translateX(${-position * ElementSize}px)`;
     ArrowHide(position);
   });
   function ArrowHide(position) {
